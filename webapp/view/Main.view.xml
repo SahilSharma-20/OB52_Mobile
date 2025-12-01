@@ -1,0 +1,72 @@
+<mvc:View
+    controllerName="zob.zfiob52.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" title="Posting Periods: Specify Time Intervals">
+
+        <!-- TOP FIELD: Posting Period Variant (NON EDITABLE) -->
+        <content>
+            <VBox class="sapUiSmallMargin">
+
+                <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                    <Label text="Posting period variant" width="200px"/>
+                    <Input value="9000" editable="false" width="150px"/>
+                </HBox>
+
+                <!-- OB52 TABLE (EDITABLE) -->
+                <Table id="ob52Table"
+                       items="{path: 'ob52>/rows'}"
+                       fixedLayout="true"
+                       inset="false">
+
+                    <columns>
+                        <Column><Text text="A"/></Column>
+                        <Column><Text text="From Account"/></Column>
+                        <Column><Text text="To Account"/></Column>
+                        <Column><Text text="From Per 1"/></Column>
+                        <Column><Text text="Year"/></Column>
+                        <Column><Text text="To Per 1"/></Column>
+                        <Column><Text text="Year"/></Column>
+                        <Column><Text text="From Per 2"/></Column>
+                        <Column><Text text="Year"/></Column>
+                        <Column><Text text="To Per 2"/></Column>
+                        <Column><Text text="Year"/></Column>
+                        <Column><Text text="Auth Grp"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Input value="{ob52>A}"/>
+                                <Input value="{ob52>FromAcc}"/>
+                                <Input value="{ob52>ToAcc}"/>
+                                <Input value="{ob52>FromPer1}" width="50px"/>
+                                <Input value="{ob52>Year1}" width="60px"/>
+                                <Input value="{ob52>ToPer1}" width="50px"/>
+                                <Input value="{ob52>Year2}" width="60px"/>
+                                <Input value="{ob52>FromPer2}" width="50px"/>
+                                <Input value="{ob52>Year3}" width="60px"/>
+                                <Input value="{ob52>ToPer2}" width="50px"/>
+                                <Input value="{ob52>Year4}" width="60px"/>
+                                <Input value="{ob52>AuthGrp}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+
+                </Table>
+
+            </VBox>
+        </content>
+
+        <!-- FOOTER -->
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Update" type="Emphasized" press="onUpdate"/>
+            </Toolbar>
+        </footer>
+
+    </Page>
+
+</mvc:View>

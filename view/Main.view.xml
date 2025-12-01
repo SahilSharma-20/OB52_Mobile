@@ -1,0 +1,88 @@
+<mvc:View
+    controllerName="zob.zfiob52.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" title="Posting Periods: Specify Time Intervals">
+
+        <content>
+            <VBox class="sapUiSmallMargin" id="rootVBox">
+
+                <!-- Posting Period Input Section -->
+                <HBox alignItems="Center" class="sapUiSmallMarginBottom" id="postingPeriodHBox">
+                    <Label text="Posting Period Variant:" width="200px"/>
+                    <!-- Input field: initially editable -->
+                    <Input id="postingPeriodInput" width="150px"/>
+                    <Button text="Submit" press="onSubmitPostingPeriod" type="Emphasized"/>
+                </HBox>
+
+                <!-- Table content, initially hidden -->
+                <VBox id="tableContainer" visible="false">
+
+                    <List items="{path: 'ob52>/rows'}">
+                        <CustomListItem>
+                            <VBox class="sapUiSmallMargin" style="border:1px solid #ccc; padding:12px; border-radius:4px;">
+                                <Title text="{ob52>A}" level="H5" class="sapUiSmallMarginBottom"/>
+                                <HBox>
+                                    <Label text="From Account:" width="140px"/>
+                                    <Input value="{ob52>FromAcc}"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="To Account:" width="140px"/>
+                                    <Input value="{ob52>ToAcc}"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="From Per 1:" width="140px"/>
+                                    <Input value="{ob52>FromPer1}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Year 1:" width="140px"/>
+                                    <Input value="{ob52>Year1}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="To Per 1:" width="140px"/>
+                                    <Input value="{ob52>ToPer1}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Year 2:" width="140px"/>
+                                    <Input value="{ob52>Year2}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="From Per 2:" width="140px"/>
+                                    <Input value="{ob52>FromPer2}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Year 3:" width="140px"/>
+                                    <Input value="{ob52>Year3}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="To Per 2:" width="140px"/>
+                                    <Input value="{ob52>ToPer2}" width="80px"/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Year 4:" width="140px"/>
+                                    <Input value="{ob52>Year4}" width="80px"/>
+                                </HBox>
+                                <HBox class="sapUiSmallMarginTop">
+                                    <Label text="Auth Group:" width="140px"/>
+                                    <Input value="{ob52>AuthGrp}"/>
+                                </HBox>
+                            </VBox>
+                        </CustomListItem>
+                    </List>
+
+                </VBox>
+            </VBox>
+        </content>
+
+        <!-- Sticky footer with back + update button -->
+        <footer>
+            <Toolbar class="stickyFooter">
+                <Button text="Back" press="onBackToInput"/>
+                <ToolbarSpacer/>
+                <Button text="Update" type="Emphasized" press="onUpdate"/>
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

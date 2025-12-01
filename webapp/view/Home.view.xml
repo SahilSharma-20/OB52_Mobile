@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="zob.zfiob52.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="homePage" title="Posting Periods">
+
+        <content>
+            <VBox class="sapUiSmallMargin">
+
+                <!-- Input + Button section (mobile friendly) -->
+                <VBox class="sapUiSmallMarginBottom">
+
+                    <Label text="Posting Period Variant:" />
+
+                    <HBox
+                        wrap="Wrap"
+                        alignItems="Center"
+                        class="sapUiTinyMarginTop">
+
+                        <Input
+                            id="postingPeriodInput"
+                            width="200px"
+                            submit="onSubmit"
+                        />
+
+                        <Button
+                            text="Submit"
+                            press="onSubmit"
+                            type="Emphasized"
+                            class="sapUiSmallMarginBegin"
+                        />
+                    </HBox>
+
+                </VBox>
+
+            </VBox>
+        </content>
+
+    </Page>
+
+</mvc:View>
