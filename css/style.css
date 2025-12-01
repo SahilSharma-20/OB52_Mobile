@@ -1,0 +1,58 @@
+/* Enter your custom styles here */
+.stickyFooter {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    background-color: white;
+}
+/* helper text for descriptions (G1 grey) */
+.helperText {
+    color: #6e6e6e !important;
+    font-size: 0.92rem;
+    line-height: 1.6; /* keeps it vertically centered */
+    white-space: nowrap; /* prevent word breaks like "Decem ber" */
+}
+
+/* ensure StepInput and helper text share baseline visually on small variants */
+.sapMStepInput {
+    vertical-align: middle;
+}
+
+/* Dark grey helper text (G1) */
+/* .fieldDescriptionMobile,
+.monthLabel {
+    color: #6e6e6e !important;
+    font-size: 0.85rem;
+}
+
+/* spacing between stepinput & month */
+/* .monthLabel {
+    margin-left: 6px !important;
+} */ 
+
+.monthLabel {
+    color: #6e6e6e !important;
+    font-size: 0.85rem;
+    margin-left: 6px !important;
+    vertical-align: middle;  /* Add this */
+    line-height: normal;      /* Ensure line height normal */
+}
+
+
+
+/* Mobile: description always below */
+@media (max-width: 768px) {
+    .fieldDescriptionMobile {
+        display: block !important;
+        margin-top: 4px;
+    }
+}
+
+/* Desktop: inline IF space available */
+@media (min-width: 769px) {
+    .fieldDescriptionMobile {
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+}
