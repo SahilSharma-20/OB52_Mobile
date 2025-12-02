@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/m/MessageBox"],function(e,t){"use strict";return e.extend("zob.zfiob52.controller.Home",{onSubmit:function(){const e=this.byId("postingPeriodInput");const n=e.getValue().trim();if(n==="9000"){const e=this.getOwnerComponent().getRouter();e.navTo("Main")}else{t.error("Invalid Posting Variant");e.setValue("")}}})});
+//# sourceMappingURL=Home.controller.js.map
